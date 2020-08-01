@@ -9,7 +9,7 @@ setuptools.setup(
     name="static_website_aws_cdk",
     version="0.0.1",
 
-    description="An empty CDK Python app",
+    description="CDK Python app for AWS S3 Static Website",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
@@ -19,7 +19,12 @@ setuptools.setup(
     packages=setuptools.find_packages(where="static_website_aws_cdk"),
 
     install_requires=[
-        "aws-cdk.core==1.51.0",
+        "aws-cdk.core",
+        "aws-cdk.aws-s3",
+        "aws-cdk.aws-certificatemanager",
+        "aws-cdk.aws-ssm",
+        "aws-cdk.aws-cloudfront",
+        "aws-cdk.custom-resources"
     ],
 
     python_requires=">=3.6",
